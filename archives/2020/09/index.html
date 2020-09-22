@@ -46,6 +46,22 @@
 
   <title>Archive | The Secret Base</title>
   
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'UA-178631414-1',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
 
 
 
@@ -234,33 +250,13 @@
   <div class="post-block">
     <div class="post-content">
       <div class="collection-title">
-        <span class="collection-header">Um..! 6 posts in total. Keep on posting.</span>
+        <span class="collection-header">Um..! 2 posts in total. Keep on posting.</span>
       </div>
 
       
     <div class="collection-year">
       <span class="collection-header">2020</span>
     </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-09-21T15:16:53+07:00"
-              content="2020-09-21">
-          09-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/thesecretbase/2020/09/21/duar/" itemprop="url">
-            <span itemprop="name">duar</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -273,68 +269,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/thesecretbase/2020/09/21/hadeh/" itemprop="url">
-            <span itemprop="name">hadeh</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-09-21T14:22:14+07:00"
-              content="2020-09-21">
-          09-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/thesecretbase/2020/09/21/ahem/" itemprop="url">
-            <span itemprop="name">ahem</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-09-21T12:18:58+07:00"
-              content="2020-09-21">
-          09-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/thesecretbase/2020/09/21/Cafe/" itemprop="url">
-            <span itemprop="name">HeliosR - Red South Star Cafe</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-09-21T09:26:47+07:00"
-              content="2020-09-21">
-          09-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/thesecretbase/2020/09/21/HeliosR%20-%20Red%20South%20Street%20Star%20Cafe%20-%20Copy/" itemprop="url">
-            <span itemprop="name">HeliosR - Red South Street Star Cafe</span>
+          <a class="post-title-link" href="/thesecretbase/2020/09/21/Gray%20Hero%20Room%201/" itemprop="url">
+            <span itemprop="name">HeliosR Gray's Hero Room</span>
           </a>
       </div>
 

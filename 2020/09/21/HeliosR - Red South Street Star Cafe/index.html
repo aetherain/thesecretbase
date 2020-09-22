@@ -31,7 +31,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://aetherain.github.io/thesecretbase/uploads/gray-jay.jpg">
 <meta property="article:published_time" content="2020-09-21T02:26:47.000Z">
-<meta property="article:modified_time" content="2020-09-21T05:14:51.071Z">
+<meta property="article:modified_time" content="2020-09-22T03:28:05.782Z">
 <meta property="article:author" content="Yuizaki">
 <meta property="article:tag" content="Helios Rising Heroes">
 <meta property="article:tag" content="Gray Reverse">
@@ -54,6 +54,22 @@
 
   <title>HeliosR - Red South Street Star Cafe | The Secret Base</title>
   
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'UA-178631414-1',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
 
 
 
@@ -266,9 +282,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2020-09-21 09:26:47 / Modified: 12:14:51" itemprop="dateCreated datePublished" datetime="2020-09-21T09:26:47+07:00">2020-09-21</time>
+      <time title="Created: 2020-09-21 09:26:47" itemprop="dateCreated datePublished" datetime="2020-09-21T09:26:47+07:00">2020-09-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-09-22 10:28:05" itemprop="dateModified" datetime="2020-09-22T10:28:05+07:00">2020-09-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/thesecretbase/categories/JP-EN-Translation/" itemprop="url" rel="index"><span itemprop="name">JP-EN Translation</span></a>
+        </span>
     </span>
 
   
@@ -281,10 +312,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="Helios-Rising-Heroes-Red-South-Street-Star-Cafe-Short-Skit-Translation"><a href="#Helios-Rising-Heroes-Red-South-Street-Star-Cafe-Short-Skit-Translation" class="headerlink" title="Helios Rising Heroes - Red South Street Star Cafe Short Skit Translation"></a>Helios Rising Heroes - Red South Street Star Cafe Short Skit Translation</h4><h5 id="Jay-Kidman-and-Gray-Reverse-from-East-Sector"><a href="#Jay-Kidman-and-Gray-Reverse-from-East-Sector" class="headerlink" title="Jay Kidman and Gray Reverse from East Sector"></a>Jay Kidman and Gray Reverse from East Sector</h5><img src="/thesecretbase/uploads/gray-jay.jpg" class="" title="[500px]" alt="Gray and Jay">
+        <h4 id="Helios-Rising-Heroes-Red-South-Street-Star-Cafe-Short-Skit-Translation"><a href="#Helios-Rising-Heroes-Red-South-Street-Star-Cafe-Short-Skit-Translation" class="headerlink" title="Helios Rising Heroes - Red South Street Star Cafe Short Skit Translation"></a>Helios Rising Heroes - Red South Street Star Cafe Short Skit Translation</h4><h5 id="Jay-Kidman-and-Gray-Reverse-from-East-Sector"><a href="#Jay-Kidman-and-Gray-Reverse-from-East-Sector" class="headerlink" title="Jay Kidman and Gray Reverse from East Sector"></a>Jay Kidman and Gray Reverse from East Sector</h5> <img src="/thesecretbase/uploads/gray-jay.jpg" class="" title="[500px]" alt="Gray and Jay">
 
 <a id="more"></a>
-<p>Gray : …</p>
+
+<p>Gray : …♪</p>
 <p>Jay : Oi, aren’t you Gray?</p>
 <p>Gray : ! Jay-san?</p>
 <p>Jay : Unexpected, right? To meet at this kind of place on our day off.</p>
@@ -320,8 +352,8 @@
             <div class="post-nav-item">
             </div>
             <div class="post-nav-item">
-                <a href="/thesecretbase/2020/09/21/HeliosR%20-%20Red%20South%20Street%20Star%20Cafe%20-%20Copy/" rel="next" title="HeliosR - Red South Street Star Cafe">
-                  HeliosR - Red South Street Star Cafe <i class="fa fa-chevron-right"></i>
+                <a href="/thesecretbase/2020/09/21/Gray%20Hero%20Room%201/" rel="next" title="HeliosR Gray's Hero Room">
+                  HeliosR Gray's Hero Room <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
