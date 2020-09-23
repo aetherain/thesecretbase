@@ -25,7 +25,7 @@
   <meta name="description" content="Helios Rising Heroes - Gray’s Hero Room Story 1 TranslationGray Reverse and Billy Wise from East Sector">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HeliosR Gray&#39;s Hero Room">
-<meta property="og:url" content="http://aetherain.github.io/2020/09/21/Gray%20Hero%20Room%201/index.html">
+<meta property="og:url" content="http://aetherain.github.io/thesecretbase/2020/09/21/Gray%20Hero%20Room%201/index.html">
 <meta property="og:site_name" content="The Secret Base">
 <meta property="og:description" content="Helios Rising Heroes - Gray’s Hero Room Story 1 TranslationGray Reverse and Billy Wise from East Sector">
 <meta property="og:locale" content="en_US">
@@ -39,7 +39,7 @@
 <meta name="twitter:image" content="http://aetherain.github.io/thesecretbase/uploads/gray-billy.jpg">
 
 
-<link rel="canonical" href="http://aetherain.github.io/2020/09/21/Gray%20Hero%20Room%201/">
+<link rel="canonical" href="http://aetherain.github.io/thesecretbase/2020/09/21/Gray%20Hero%20Room%201/">
 
 
 <script class="page-configurations">
@@ -54,21 +54,14 @@
 
   <title>HeliosR Gray's Hero Room | The Secret Base</title>
   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178631414-1"></script>
     <script>
-      function sendPageView() {
-        if (CONFIG.hostname !== location.hostname) return;
-        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
-        localStorage.setItem('uid', uid);
-        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
-          v  : 1,
-          tid: 'UA-178631414-1',
-          cid: uid,
-          t  : 'pageview',
-          dp : encodeURIComponent(location.pathname)
-        }));
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-178631414-1');
       }
-      document.addEventListener('pjax:complete', sendPageView);
-      sendPageView();
     </script>
 
 
@@ -256,7 +249,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://aetherain.github.io/2020/09/21/Gray%20Hero%20Room%201/">
+    <link itemprop="mainEntityOfPage" href="http://aetherain.github.io/thesecretbase/2020/09/21/Gray%20Hero%20Room%201/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/thesecretbase/uploads/gray2.jpg">
@@ -272,7 +265,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          HeliosR Gray's Hero Room<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3VzZXItbmFtZS9yZXBvLW5hbWUvdHJlZS9icmFuY2gtbmFtZS9zdWJkaXJlY3RvcnktbmFtZS9fcG9zdHMvR3JheSBIZXJvIFJvb20gMS5tZA==" title="Edit this post"><i class="fa fa-pen-nib"></i></span>
+          HeliosR Gray's Hero Room
         </h1>
 
         <div class="post-meta-container">

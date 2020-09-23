@@ -24,14 +24,14 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="The Secret Base">
-<meta property="og:url" content="http://aetherain.github.io/archives/2020/09/index.html">
+<meta property="og:url" content="http://aetherain.github.io/thesecretbase/archives/2020/09/index.html">
 <meta property="og:site_name" content="The Secret Base">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Yuizaki">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://aetherain.github.io/archives/2020/09/">
+<link rel="canonical" href="http://aetherain.github.io/thesecretbase/archives/2020/09/">
 
 
 <script class="page-configurations">
@@ -46,21 +46,14 @@
 
   <title>Archive | The Secret Base</title>
   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178631414-1"></script>
     <script>
-      function sendPageView() {
-        if (CONFIG.hostname !== location.hostname) return;
-        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
-        localStorage.setItem('uid', uid);
-        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
-          v  : 1,
-          tid: 'UA-178631414-1',
-          cid: uid,
-          t  : 'pageview',
-          dp : encodeURIComponent(location.pathname)
-        }));
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-178631414-1');
       }
-      document.addEventListener('pjax:complete', sendPageView);
-      sendPageView();
     </script>
 
 
