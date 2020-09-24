@@ -264,10 +264,10 @@
       <div class="post-body">
           <div class="tag-cloud">
   <div class="tag-cloud-title">
-    2 tags in total
+    4 tags in total
   </div>
   <div class="tag-cloud-tags">
-    <a href="/thesecretbase/tags/Gray-Reverse/" style="font-size: 12px;" class="tag-cloud-0">Gray Reverse</a> <a href="/thesecretbase/tags/Helios-Rising-Heroes/" style="font-size: 12px;" class="tag-cloud-0">Helios Rising Heroes</a>
+    <a href="/thesecretbase/tags/Akira-Ootori/" style="font-size: 12px;" class="tag-cloud-0">Akira Ootori</a> <a href="/thesecretbase/tags/Gray-Reverse/" style="font-size: 21px;" class="tag-cloud-5">Gray Reverse</a> <a href="/thesecretbase/tags/Helios-Rising-Heroes/" style="font-size: 30px;" class="tag-cloud-10">Helios Rising Heroes</a> <a href="/thesecretbase/tags/Will-Sprout/" style="font-size: 12px;" class="tag-cloud-0">Will Sprout</a>
   </div>
 </div>
 
@@ -360,77 +360,6 @@
 
 
 
-  <script src="//cdn.jsdelivr.net/npm/firebase@7.19.1/firebase-app.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/firebase@7.19.1/firebase-firestore.js"></script>
-  <script>
-    firebase.initializeApp({
-      apiKey   : 'AIzaSyBO7Gc_XEruoRXA_RJlZdaFYyDmYBbSC48',
-      projectId: 'thesecretbase-a2dd8'
-    });
-
-    function getCount(doc, increaseCount) {
-      // IncreaseCount will be false when not in article page
-      return doc.get().then(d => {
-        let count = 0;
-        if (!d.exists) { // Has no data, initialize count
-          if (increaseCount) {
-            doc.set({
-              count: 1
-            });
-            count = 1;
-          }
-        } else { // Has data
-          count = d.data().count;
-          if (increaseCount) {
-            // If first view this article
-            doc.set({ // Increase count
-              count: count + 1
-            });
-            count++;
-          }
-        }
-
-        return count;
-      });
-    }
-
-    function appendCountTo(el) {
-      return count => {
-        el.innerText = count;
-      }
-    }
-  </script>
-  <script>
-    (function() {
-      const db = firebase.firestore();
-      const articles = db.collection('articles');
-
-      if (CONFIG.page.isPost) { // Is article page
-        const title = document.querySelector('.post-title').innerText.trim();
-        const doc = articles.doc(title);
-        let increaseCount = CONFIG.hostname === location.hostname;
-        if (localStorage.getItem(title)) {
-          increaseCount = false;
-        } else {
-          // Mark as visited
-          localStorage.setItem(title, true);
-        }
-        getCount(doc, increaseCount).then(appendCountTo(document.querySelector('.firestore-visitors-count')));
-      } else if (CONFIG.page.isHome) { // Is index page
-        const promises = [...document.querySelectorAll('.post-title')].map(element => {
-          const title = element.innerText.trim();
-          const doc = articles.doc(title);
-          return getCount(doc);
-        });
-        Promise.all(promises).then(counts => {
-          const metas = document.querySelectorAll('.firestore-visitors-count');
-          counts.forEach((val, idx) => {
-            appendCountTo(metas[idx])(val);
-          });
-        });
-      }
-    })();
-  </script>
 
 
 
